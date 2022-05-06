@@ -1,14 +1,22 @@
+function Icons(props){
+    return(
+        <div className={props.classlogo}>
+            <div className={props.class}><ion-icon name={props.name}></ion-icon></div>
+        </div>
+    )
+}
+
 export default function TopoMobile(){
     return (
-        <div class="topo-mobile">
-            <div class="container-logos-mobile">
-                <div class="logos">
-                    <div class="logo"><ion-icon name="logo-instagram"></ion-icon> </div> 
+        <div className="topo-mobile">
+            <div className="container-logos-mobile">
+                <Icons name="logo-instagram" class="logo" classlogo="logos"/>
+
+                <div className="logo-escrita"> 
+                    <img src="img/logo.png" alt="logo"/> 
                 </div>
-                <div class="logo-escrita"> <img src="img/logo.png" alt="logo"/> </div>
-                <div class="container-icones-mobile">
-                    <div class="icon"><ion-icon name="paper-plane-outline"></ion-icon></div>
-                </div>
+                
+                <Icons name="paper-plane-outline" class="icon" classlogo="container-icones-mobile"/>
             </div>
         </div>
     )
