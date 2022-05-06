@@ -44,7 +44,7 @@ export default function Feed(){
                 </div>
             </div>
             <div className="img-post">
-                <video width="100%"  autoplay loop muted>
+                <video width="100%"  autoPlay loop muted>
                     <source src="/img/video.mp4" type="video/mp4"/>
                     <source src="/img/video.ogv" type="video/ogg"/>
                     Your browser does not support the video tag.

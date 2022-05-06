@@ -1,11 +1,17 @@
+function Icons(props){
+    return(
+        <div className="icon"><ion-icon name={props.name}></ion-icon></div>
+    )
+}
+
 export default function BarraInferiorMobile(){
     return (
         <div className="barra-inferior-mobile">
-            <div className="icon"><ion-icon name="home"></ion-icon></div>
-            <div className="icon"><ion-icon name="search-outline"></ion-icon></div>
-            <div className="icon"><ion-icon name="add-circle-outline"></ion-icon></div>
-            <div className="icon"><ion-icon name="heart-outline"></ion-icon></div>
-            <div className="icon"><ion-icon name="person-outline"></ion-icon></div>
+            <Icons name="home" />
+            <Icons name="search-outline" />
+            <Icons name="add-circle-outline" />
+            <Icons name="heart-outline" />
+            <Icons name="person-outline" />
         </div>
     )
 }

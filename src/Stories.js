@@ -1,58 +1,63 @@
-export default function Stories(){
+function Story(props) {
+    return (
+        <div className="stories-post">
+            <div className="background">
+                <img src={props.img} alt="stories"/>
+            </div>
+            <p> {props.title}</p>
+        </div>
+    );
+}
+  
+export default function Stories() {
+    // Logic
+    const items = [
+      {
+        title: "9gag",
+        img: "/img/9gag 1.png",
+      },
+      {
+        title: "meowded",
+        img: "/img/meowed1.png",
+      },
+      {
+        title: "barked",
+        img: "/img/barked 1.png",
+      },
+      {
+        title: "nathanwpyle...",
+        img: "/img/nathanwpylestrangeplanet 1.png",
+      },
+      {
+        title: "wawawiwac...",
+        img: "/img/wawawiwacomicsa 1.png",
+      },
+      {
+        title: "respondeai",
+        img: "/img/respondeai 1.png",
+      },     
+      {
+        title: "filomoderna",
+        img: "/img/filomoderna 1.png",
+      },
+      {
+        title: "memeria...",
+        img: "/img/memeriagourmet 1.png",
+      }
+    ];
+  
+    const stories = items.map((item) => (
+      <Story title={item.title} img={item.img} />
+    ));
+
+    // UI
     return (
         <div className="stories">            
-                <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/9gag 1.png" alt="stories"/>
-                    </div>
-                    <p> 9gag</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/meowed1.png" alt="stories"/>
-                    </div>
-                    <p> meowded</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/barked 1.png" alt="stories"/>
-                    </div>
-                    <p> barked</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/nathanwpylestrangeplanet 1.png" alt="stories"/>
-                    </div>
-                    <p> nathanwpyle...</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/wawawiwacomicsa 1.png" alt="stories"/>
-                    </div>
-                    <p> wawawiwac...</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/respondeai 1.png" alt="stories"/>
-                    </div>
-                    <p> respondeai</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/filomoderna 1.png" alt="stories"/>
-                    </div>
-                    <p> filomoderna</p>
-                        </div>
-                        <div className="stories-post">
-                    <div className="background">
-                        <img src="/img/memeriagourmet 1.png" alt="stories"/>
-                    </div>
-                    <p> memeria...</p>
-                </div>
+            {stories}
 
-                <div className="setinha">
-                    <ion-icon name="chevron-forward-circle"></ion-icon>
-                </div>    
+            <div className="setinha">
+                <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>    
-    )
-}
+        </div>    
+    );
+  }

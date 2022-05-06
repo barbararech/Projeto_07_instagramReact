@@ -42,6 +42,7 @@ body{
     .logo{
         font-size: 22px;
         margin-right: 11px;
+        cursor:pointer;
     }
     
     .borda-vertical{
@@ -56,6 +57,7 @@ body{
         width: 103px;
         margin-top: 14px;
         margin-bottom: 10px;
+        cursor:pointer;
     }
     
     /* Pesquisar */
@@ -75,6 +77,7 @@ body{
     /* Ícones */
     .icon{
         font-size: 22px;
+        cursor: pointer;
     }
     
     .container-icones{
