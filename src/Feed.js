@@ -10,10 +10,18 @@ function Posts(props) {
    
     const [nameIcon, setNameIcon] = React.useState("heart-outline");
     const [classIcon,setClassIcon] = React.useState("icon-2");
+    const [isActive, setActive] = React.useState(false);
 
     function ChangeIcon(){
         setNameIcon("heart");
         setClassIcon("icon-3");
+        setActive(true);
+    }
+
+    function ChangeIconInitial(){
+        setNameIcon("heart-outline");
+        setClassIcon("icon-2");
+        setActive(!isActive);
     }
 
     return (
@@ -33,7 +41,9 @@ function Posts(props) {
             <div className="foot-post">
                 <div className="container-acoes">
                     <div className="acoes">
-                        <Icons name={nameIcon} className={classIcon} onClick={ChangeIcon}/>
+                        <button onClick={isActive ? ChangeIconInitial:ChangeIcon}>
+                            <Icons name={nameIcon} className={classIcon}/>
+                        </button>
                         <Icons name="chatbubble-outline" className="icon-2" />
                         <Icons name="paper-plane-outline" className="icon-2" />
                     </div>
