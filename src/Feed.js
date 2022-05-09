@@ -1,3 +1,5 @@
+import React from "react";
+
 function Icons(props){
     return(
         <div className={props.className}><ion-icon name={props.name}></ion-icon></div>
@@ -5,6 +7,15 @@ function Icons(props){
 }
 
 function Posts(props) {
+   
+    const [nameIcon, setNameIcon] = React.useState("heart-outline");
+    const [classIcon,setClassIcon] = React.useState("icon-2");
+
+    function ChangeIcon(){
+        setNameIcon("heart");
+        setClassIcon("icon-3");
+    }
+
     return (
         <div className="post">
             <div className="head-post">
@@ -16,13 +27,13 @@ function Posts(props) {
                     <Icons name="ellipsis-horizontal" />
                 </div>
             </div>
-            <div className="img-post">
+            <div className="img-post" onClick={ChangeIcon}>
                 <img src={props.imgPost} alt="post"/>
             </div>
             <div className="foot-post">
                 <div className="container-acoes">
                     <div className="acoes">
-                        <Icons name="heart-outline" className="icon-2" />
+                        <Icons name={nameIcon} className={classIcon} onClick={ChangeIcon}/>
                         <Icons name="chatbubble-outline" className="icon-2" />
                         <Icons name="paper-plane-outline" className="icon-2" />
                     </div>
