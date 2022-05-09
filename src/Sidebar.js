@@ -1,14 +1,4 @@
-function User(props){
-    return(
-        <div className="user">
-            <img src={props.imgUser} alt="perfil"/>
-            <div>
-                <p><strong>{props.username}</strong></p>
-                <p>{props.user}</p>
-            </div>
-        </div>
-    )
-}
+import SidebarUser from "./Sidebar User";
 
 function Perfil(props) {
     return (
@@ -29,14 +19,6 @@ function Perfil(props) {
   
 export default function Sidebar() {
     // Logic
-
-    const userItem = [
-        {
-            user: "Catana",
-            username: "catanacomics",
-            img: "/img/catanacomics 1.png"
-        }
-    ]
 
     const items = [
       {
@@ -65,10 +47,6 @@ export default function Sidebar() {
         reason: "Novo no Instagram"
       }
     ];
-  
-    const userInstagram = userItem.map((user) => (
-        <User user={user.user} username={user.username} imgUser={user.img} />
-    ));
 
     const sugestoes = items.map((item) => (
       <Perfil title={item.title} img={item.img} reason={item.reason} />
@@ -80,7 +58,7 @@ export default function Sidebar() {
         <div className="sidebar">
 
             {/* <!-- User Sidebar --> */}
-            {userInstagram} 
+            <SidebarUser/>
             
             {/* <!-- Sugestões de Perfis --> */}
             <div className="sugestoes">
@@ -88,7 +66,6 @@ export default function Sidebar() {
                     <p>Sugestões para você</p>
                     <p>Ver tudo</p>
                 </div>
-                
                 {sugestoes}
             </div>
 
